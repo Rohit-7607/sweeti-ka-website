@@ -90,7 +90,26 @@
         button:hover {
             background-color: #666;
         }
+        input, textarea {
+            width: 100%;
+            max-width: 400px;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            height: 100px;
+        }
     </style>
+    <script>
+        let submitted = false;
+        function hideForm() {
+            if (submitted) {
+                document.getElementById("contact-form").innerHTML = "<p>Thank you! Your message has been sent.</p>";
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -98,7 +117,7 @@
         <h1>Veridex Compliance Services Pvt Ltd</h1>
         <p>Your Trusted Partner in KYC & Transaction Monitoring</p>
     </header>
-    
+
     <nav>
         <a href="#about">About Us</a>
         <div class="dropdown">
@@ -159,15 +178,15 @@
     <section id="contact">
         <h2>Contact Us</h2>
         <p>Email: contact@veridex.com | Phone: +91 98765 43210</p>
-<form action="https://docs.google.com/forms/d/e/1FAIpQLSeLPVrvZSw-XLdAwOfxjhUG6YFCFKynhAjd1WjhR71eb3HUUw/formResponse" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-    <input type="text" name="entry.65860298" placeholder="Your Name" required>
-    <input type="email" name="entry.1469654620" placeholder="Your Email" required>
-    <textarea name="entry.2051412411" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-</form>
-<iframe name="hidden_iframe" style="display:none;"></iframe>
-
-
+        
+        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSeLPVrvZSw-XLdAwOfxjhUG6YFCFKynhAjd1WjhR71eb3HUUw/formResponse" 
+              method="POST" target="hidden_iframe" onsubmit="submitted=true; setTimeout(hideForm, 1000);">
+            <input type="text" name="entry.65860298" placeholder="Your Name" required>
+            <input type="email" name="entry.1469654620" placeholder="Your Email" required>
+            <textarea name="entry.2051412411" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
     </section>
 
     <footer>
