@@ -179,14 +179,16 @@
         <h2>Contact Us</h2>
         <p>Email: contact@veridex.com | Phone: +91 98765 43210</p>
         
-        <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfAXyh2iMoy_7cIB_qqMtRS4s0LNmHPM5i26wc8O8FrW02WsQ/viewform?usp=header" 
-              method="POST" target="hidden_iframe" onsubmit="submitted=true; setTimeout(hideForm, 1000);">
-            <input type="text" name="entry.65860298" placeholder="Your Name" required>
-            <input type="email" name="entry.1469654620" placeholder="Your Email" required>
-            <textarea name="entry.2051412411" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
-        <iframe name="hidden_iframe" style="display:none;"></iframe>
+<form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSfAXyh2iMoy_7cIB_qqMtRS4s0LNmHPM5i26wc8O8FrW02WsQ/formResponse" 
+      method="POST" target="hidden_iframe" onsubmit="submitted=true; setTimeout(hideForm, 1000);">
+    <input type="text" name="entry.65860298" placeholder="Your Name" required>
+    <input type="email" name="entry.1469654620" placeholder="Your Email" required>
+    <textarea name="entry.2051412411" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+</form>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
     </section>
 
     <footer>
